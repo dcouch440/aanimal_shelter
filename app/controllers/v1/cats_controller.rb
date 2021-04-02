@@ -21,7 +21,7 @@ class V1::CatsController < ApplicationController
   end
 
   def destroy
-    Cat.find(params[:id]).destroy!
+    Cat.find(params[:id]).destroy!()
   end
 
   def send_response(cats, status = :ok)

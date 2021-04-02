@@ -21,7 +21,7 @@ class V1::DogsController < ApplicationController
   end
 
   def destroy
-    Dog.find(params[:id]).destroy!
+    Dog.find(params[:id]).destroy!()
   end
 
   private def send_response(dogs, status = :ok)

@@ -29,7 +29,7 @@
 * ByeBug
 * git
 
-## `Installation & Run on your machine  :`
+## `Install & Run on your machine  :`
 ***
 * These instructions assume you have ruby, rails, & postgres installed
 * Install [Ruby and Rails](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-ruby)
@@ -184,9 +184,61 @@ rails db:migrate
 ```
 
 * visit localhost:3000 to view the app
+## `Routes & Api Information`
 
 ***
 ## `Schema`
+
+* At any time from your console you can type
+
+```
+  rails routes
+```
+
+* To bring information up about the routes. Currently the routes are
+
+```
+Prefix Verb    URI Pattern     Controller#Action
+  GET           /v1/dogs        v1/dogs#index
+  POST          /v1/dogs        v1/dogs#create
+  GET           /v1/dogs/:id    v1/dogs#show
+  PATCH         /v1/dogs/:id    v1/dogs#update
+  DELETE        /v1/dogs/:id    v1/dogs#destroy
+  GET           /v1/cats        v1/cats#index
+  POST          /v1/cats        v1/cats#create
+  GET           /v1/cats/:id    v1/cats#show
+  PATCH         /v1/cats/:id    v1/cats#update
+  DELETE        /v1/cats/:id    v1/cats#destroy
+```
+
+The fallowing information is a listing of routes and real responses with corresponding status codes
+The application displayed is called postman and can be downloaded for free from for testing
+* Download Postman ( https://www.postman.com/ )
+
+## `DogPaths`
+#### `GET/v1/dogs`
+<img src='public/animal_shelter_request/dog/get_dogs.PNG' alt='dogs get'>
+#### `POST /v1/dogs`
+<img src='public/animal_shelter_request/dog/post_dogs.PNG' alt='dogs post'> \
+#### `GET /v1/dogs/:id`
+<img src='public/animal_shelter_request/dog/get_dog.PNG' alt='dog get'>
+#### `PATCH /v1/dogs/:id `
+<img src='public/animal_shelter_request/dog/patch_dog.PNG' alt='dogs patch'>
+#### `DELETE /v1/dogs/:id`
+<img src='public/animal_shelter_request/dog/destroy_dog.PNG' alt='dogs delete'>
+
+## `Cat Paths`
+#### `GET /v1/cats`
+<img src='public/animal_shelter_request/' alt='cats get'>
+#### `POST /v1/cats`
+<img src='public/animal_shelter_request/' alt='cats post'>
+#### `GET /v1/cats/:id`
+<img src='public/animal_shelter_request/' alt='cats get'>
+#### `PATCH /v1/cats/:id`
+<img src='public/animal_shelter_request/' alt='cats patch'>
+#### `DELETE /v1/cats/:id`
+<img src='public/animal_shelter_request/' alt='cats delete'>
+
 
 ***
 The MIT License (MIT)

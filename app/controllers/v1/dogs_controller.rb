@@ -24,9 +24,9 @@ class V1::DogsController < ApplicationController
     Dog.find(params[:id]).destroy!
   end
 
-  private def gen_response(cats, status = :ok)
-    cats_data = CatSerializer.new(cats)
-    send_data = cats_data.serialized_cats_with_statistics()
+  private def gen_response(dogs, status = :ok)
+    dogs_data = DogSerializer.new(dogs)
+    send_data = dogs_data.serialized_dogs_with_statistics()
     render json: send_data, status: status
   end
 

@@ -1,4 +1,4 @@
-class CatSerializer
+class DogSerializer
 
   def initialize(dogs)
     @dogs = dogs

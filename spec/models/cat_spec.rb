@@ -6,6 +6,7 @@ RSpec.describe Cat, type: :model do
   %i[name breed age gender coat_length size].each do |property|
     it { should validate_presence_of property }
   end
+
   it 'returns the total number of cats' do
     FactoryBot.create_list(:cat, 10)
     expect(Cat.total_cats).to eq 10

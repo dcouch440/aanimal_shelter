@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_04_02_160952) do
   create_table "cats", force: :cascade do |t|
     t.string "name"
     t.string "breed"
+    t.string "age"
     t.string "gender"
     t.string "coat_length"
     t.string "size"

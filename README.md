@@ -203,7 +203,7 @@ rails db:migrate
 * Fallow it up with the URI pattern
 * The Controller action is the MODELSController method its calling
 * The Prefix is the action it uses when acting
-
+* GET request come with statistics
 ```
 Prefix Verb    URI Pattern     Controller#Action
   GET           /v1/dogs        v1/dogs#index
@@ -223,13 +223,13 @@ The application displayed is called postman and can be downloaded for free from 
 * Download Postman ( https://www.postman.com/ )
 
 # `Dog Paths`
-### `GET/v1/dogs`
+### ` GET/v1/dogs { comes with statistics } `
 <img src='public/animal_shelter_request/dog/get_dogs.PNG' alt='dogs get'>
 
 ### `POST /v1/dogs`
 <img src='public/animal_shelter_request/dog/post_dogs.PNG' alt='dogs post'>
 
-### `GET /v1/dogs/:id`
+### ` GET /v1/dogs/:id { comes with statistics } `
 
 <img src='public/animal_shelter_request/dog/get_dog.PNG' alt='dog get'>
 
@@ -242,13 +242,13 @@ The application displayed is called postman and can be downloaded for free from 
 
 ## `Cat Paths`
 
-### `GET /v1/cats`
+### ` GET /v1/cats { comes with statistics } `
 <img src='public/animal_shelter_request/cat/get_cats.PNG' alt='cats get'>
 
 ### `POST /v1/cats`
 <img src='public/animal_shelter_request/cat/post_cats.PNG' alt='cats post'>
 
-### `GET /v1/cats/:id`
+### ` GET /v1/cats/:id { comes with statistics } `
 <img src='public/animal_shelter_request/cat/get_cats.PNG' alt='cats get'>
 
 ### `PATCH /v1/cats/:id`

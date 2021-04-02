@@ -1,32 +1,36 @@
 class V1::DogsController < ApplicationController
 
   def index
-    json_response(Dog.all)
+    gen_response(Dog.all)
   end
 
   def create
     dog = Dog.create!(dog_params)
-    json_response(dog, :created)
+    gen_response(dog, :created)
   end
 
   def show
     dog = Dog.find(params[:id])
-    json_response(dog)
+    gen_response(dog)
   end
 
   def update
     dog = Dog.find(params[:id])
     dog.update!(dog_params)
-    json_response(dog, :created)
+    gen_response(dog, :created)
   end
 
   def destroy
     Dog.find(params[:id]).destroy!
   end
 
-  private
+  private def gen_response(cats, status = :ok)
+    cats_data = CatSerializer.new(cats)
+    send_data = cats_data.serialized_cats_with_statistics()
+    render json: send_data, status: status
+  end
 
-  def dog_params
+  private def dog_params
     params.permit(:name, :breed, :age, :gender, :coat_length, :size)
   end
 

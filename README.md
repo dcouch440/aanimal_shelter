@@ -215,29 +215,40 @@ The fallowing information is a listing of routes and real responses with corresp
 The application displayed is called postman and can be downloaded for free from for testing
 * Download Postman ( https://www.postman.com/ )
 
-## `DogPaths`
-#### `GET/v1/dogs`
+# `Dog Paths`
+### `GET/v1/dogs`
 <img src='public/animal_shelter_request/dog/get_dogs.PNG' alt='dogs get'>
-#### `POST /v1/dogs`
-<img src='public/animal_shelter_request/dog/post_dogs.PNG' alt='dogs post'> \
-#### `GET /v1/dogs/:id`
+
+### `POST /v1/dogs`
+<img src='public/animal_shelter_request/dog/post_dogs.PNG' alt='dogs post'>
+
+### `GET /v1/dogs/:id`
+
 <img src='public/animal_shelter_request/dog/get_dog.PNG' alt='dog get'>
-#### `PATCH /v1/dogs/:id `
+
+### `PATCH /v1/dogs/:id `
+
 <img src='public/animal_shelter_request/dog/patch_dog.PNG' alt='dogs patch'>
-#### `DELETE /v1/dogs/:id`
+
+### `DELETE /v1/dogs/:id`
 <img src='public/animal_shelter_request/dog/destroy_dog.PNG' alt='dogs delete'>
 
 ## `Cat Paths`
-#### `GET /v1/cats`
-<img src='public/animal_shelter_request/' alt='cats get'>
-#### `POST /v1/cats`
-<img src='public/animal_shelter_request/' alt='cats post'>
-#### `GET /v1/cats/:id`
-<img src='public/animal_shelter_request/' alt='cats get'>
-#### `PATCH /v1/cats/:id`
-<img src='public/animal_shelter_request/' alt='cats patch'>
-#### `DELETE /v1/cats/:id`
-<img src='public/animal_shelter_request/' alt='cats delete'>
+
+### `GET /v1/cats`
+<img src='public/animal_shelter_request/cat/get_cats.PNG' alt='cats get'>
+
+### `POST /v1/cats`
+<img src='public/animal_shelter_request/cat/post_cats.PNG' alt='cats post'>
+
+### `GET /v1/cats/:id`
+<img src='public/animal_shelter_request/cat/get_cats.PNG' alt='cats get'>
+
+### `PATCH /v1/cats/:id`
+<img src='public/animal_shelter_request/cat/patch_cat.PNG' alt='cats patch'>
+
+### `DELETE /v1/cats/:id`
+<img src='public/animal_shelter_request/cat/destroy_cat.PNG' alt='cats delete'>
 
 
 ***

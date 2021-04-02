@@ -95,6 +95,7 @@ git clone https://github.com/dcouch440/marios_reviews.git
 ``` bash
 code .
 ```
+
 For windows users navigate to the database.yml file to set your username and password.
 
 ```
@@ -110,6 +111,9 @@ Setup postgresql for rails
 
 ```
 * If you wish to keep these private you can also use a credentials password or an ENV file
+
+* Note : we use <%= %> inside the database file because we are not within a ruby file.
+
 ### `Credentials`
 * See this link to learn how to do so. ( https://www.youtube.com/watch?v=BHgvPPr2nLE )
 
@@ -157,8 +161,8 @@ SECOND_VALUE_NAME='SECOND_VALUE'
 * Then from within your files you can call on these files as such
 
 ```
-  ENV['FIRST_VALUE_NAME']
-  ENV['SECOND_VALUE_NAME']
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
 ```
 
 * Thats all for .env files

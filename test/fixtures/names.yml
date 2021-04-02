@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  breed: MyString
+  sound: MyString
+  age: MyString
+  gender: MyString
+  coat_length: MyString
+  size: MyString
+
+two:
+  breed: MyString
+  sound: MyString
+  age: MyString
+  gender: MyString
+  coat_length: MyString
+  size: MyString

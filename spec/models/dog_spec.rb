@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Dog, type: :model do
+describe Dog, type: :model do
   include FastData::Dogs
 
   %i[name breed age gender coat_length size].each do |property|
@@ -23,11 +23,13 @@ RSpec.describe Dog, type: :model do
   end
 
   context 'When there are no dogs' do
+
     [Dog.puppies, Dog.adults, Dog.seniors].each do |query|
       it 'should have contents of zero' do
         expect(query).to eq 0
       end
     end
+
   end
 
 end

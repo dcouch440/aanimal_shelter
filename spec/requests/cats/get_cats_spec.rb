@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-describe 'Dog' do
+describe 'Cat' do
 
-  let!(:dogs) { FactoryBot.create_list(:dog, 10) }
+  let!(:cats) { FactoryBot.create_list(:cat, 10) }
 
   describe 'GET #index', :type => :request do
 
     before do
-      get v1_dogs_path
+      get v1_cats_path
       @parse = JSON.parse(response.body)
     end
 
-    it 'returns all dogs' do
-      expect(@parse['dogs'].length).to eq(10)
+    it 'returns all cats' do
+      expect(@parse['cats'].length).to eq(10)
     end
 
     it 'returns status code of 200' do
@@ -22,17 +22,18 @@ describe 'Dog' do
   end
 
   describe 'GET #show', :type => :request do
-    let!(:dog) { dogs.first }
+
+    let!(:dog) { cats.first }
 
     context 'when successful' do
 
       before do
-        get v1_dog_path(dog)
+        get v1_cat_path(dog)
         @parse = JSON.parse(response.body)
       end
 
       it 'returns a dog' do
-        expect(@parse['dogs']['id']).to eq dog.id
+        expect(@parse['cats']['id']).to eq dog.id
       end
 
       it { expect(response).to have_http_status :success }
@@ -41,7 +42,7 @@ describe 'Dog' do
 
     context 'when unsuccessful' do
 
-      before { get v1_dog_path(dogs.last.id + 1) }
+      before { get v1_dog_path(cats.last.id + 1) }
 
       it { expect(response).to have_http_status :not_found}
 

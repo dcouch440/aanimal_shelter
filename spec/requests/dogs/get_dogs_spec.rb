@@ -5,19 +5,20 @@ describe 'Dogs' do
   let!(:dogs) { FactoryBot.create_list(:dog, 10) }
 
   describe 'Get #index', :type => :request do
+
     before do
       get v1_dogs_path
-      @res = JSON.parse(response.body)
+      @parse = JSON.parse(response.body)
     end
-    it 'should have statistics attached' do
-      expect(@res['statistics']['total']).to eq(10)
-    end
+
     it 'returns all dogs' do
-      expect(@res['dogs'].length).to eq(10)
+      expect(@parse['dogs'].length).to eq(10)
     end
+
     it 'returns status code of 200' do
       expect(response).to have_http_status(:success)
     end
+
   end
 
   describe '#show', :type => :request do
@@ -26,11 +27,13 @@ describe 'Dogs' do
     context 'when successful' do
       before do
         get v1_dog_path(dog)
-        @res = JSON.parse(response.body)
+        @parse = JSON.parse(response.body)
       end
+
       it 'returns a dog' do
-        expect(@res['dogs']['id']).to eq dog.id
+        expect(@parse['dogs']['id']).to eq dog.id
       end
+
       it { expect(response).to have_http_status :success }
     end
 

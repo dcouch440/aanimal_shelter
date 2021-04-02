@@ -1,33 +1,37 @@
 class V1::CatsController < ApplicationController
 
   def index
-    json_response(Cat.all)
+    gen_response(Cat.all)
   end
 
   def create
     cat = Cat.create!(cat_params)
-    json_response(cat, :created)
+    gen_response(cat, :created)
   end
 
   def show
     cat = Cat.find(params[:id])
-    json_response(cat)
+    gen_response(cat)
   end
 
   def update
     cat = Cat.find(params[:id])
     cat.update!(cat_params)
-    json_response(cat, :created)
+    gen_response(cat, :created)
   end
 
   def destroy
     Cat.find(params[:id]).destroy!
   end
 
-  private
+  def gen_response(cats, status = :ok)
+    cats_data = CatSerializer.new(cats)
+    send_data = cats_data.serialized_cats_with_statistics()
+    render json: send_data, status: status
+  end
 
-  def cat_params
-    params.permit(:name, :breed, :gender, :coat_length, :size)
+  private def cat_params
+    params.permit(:name, :breed, :age, :gender, :coat_length, :size)
   end
 
 end

@@ -9,8 +9,7 @@
 ## `About this App`
 - This is a week 6 ` Ruby/Rails ` Epicodus school project.
 - The requirenments of this Api is to include a dogs and cats table.
-- This is an api to replicate a animal shelter api
-
+- This Api has full CRUD functionality for both tables.
 ***
 ### `Technology Used:`
 
@@ -35,8 +34,8 @@
 * Install [Ruby and Rails](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-ruby)
 * Install [PostgreSQL](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-postgres)
 ***
-  
-* Go to ( https://github.com/dcouch440/marios_reviews ).
+
+* Go to ( https://github.com/dcouch440/animal_shelter ).
 
 *  Navigate to the code button on the Github website.
 
@@ -51,9 +50,9 @@
 ```
 
 - Once you have chosen your desired directory use the command.
-  
+
 ```bash
-git clone https://github.com/dcouch440/marios_reviews.git
+git clone https://github.com/dcouch440/animal_shelter.git
 ```
 
 <div
@@ -139,6 +138,7 @@ Setup postgresql for rails
 ```
 
 * Thats all for credentials
+
 ### `ENV`
 * start by adding the gem
 ```
@@ -188,14 +188,21 @@ rails db:migrate
 
 ***
 ## `Schema`
+<img src='public/img/animal_shelter_schema.PNG'>
 
 * At any time from your console you can type
 
 ```
   rails routes
 ```
+## `Routes`
 
 * To bring information up about the routes. Currently the routes are
+* NOTE all routes are appendages to the root route
+* Start your route with http://localhost:3000
+* Fallow it up with the URI pattern
+* The Controller action is the MODELSController method its calling
+* The Prefix is the action it uses when acting
 
 ```
 Prefix Verb    URI Pattern     Controller#Action
@@ -250,7 +257,12 @@ The application displayed is called postman and can be downloaded for free from 
 ### `DELETE /v1/cats/:id`
 <img src='public/animal_shelter_request/cat/destroy_cat.PNG' alt='cats delete'>
 
-
+#### There are a couple codes that you might come across
+* The codes shown above are specific to completing the tasks, here are the ones to look out for if things go wrong.
+```
+ 422 UNPROCESSABLE ENTITY
+ 404 NOT FOUNT
+```
 ***
 The MIT License (MIT)
 

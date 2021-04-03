@@ -151,7 +151,7 @@ gem 'dotenv-rails'
 touch .env
 ```
 
-* within your file add your key
+* within your file add your key and value (no quotes)
 
 ```
 FIRST_VALUE_NAME='FIRST_VALUE'

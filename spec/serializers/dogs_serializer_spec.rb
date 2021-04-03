@@ -4,15 +4,34 @@ describe 'statistical dogs json data', :type => :request do
 
   let!(:dogs) { FactoryBot.create_list(:dog, 20) }
 
-  before do
-    get v1_cats_path
-    @res = JSON.parse(response.body)['statistics']
+  describe '#index' do
+
+    before do
+      get v1_cats_path
+      @res = JSON.parse(response.body)['statistics']
+    end
+
+    ['total', 'kittens', 'adults', 'seniors'].each do |attr|
+      it "should include #{attr} data" do
+        expect(@res[attr]).not_to eq(nil)
+      end
+    end
+
   end
 
-  ['total', 'kittens', 'adults', 'seniors'].each do |attr|
-    it "should include #{attr} data" do
-      expect(@res[attr]).not_to eq(nil)
+  describe '#show' do
+
+    before do
+      get v1_dog_path(dogs.first.id)
+      @res = JSON.parse(response.body)['statistics']
     end
+
+    ['total', 'puppies', 'adults', 'seniors'].each do |attr|
+      it "should include #{attr} data" do
+        expect(@res[attr]).not_to eq(nil)
+      end
+    end
+
   end
 
 end

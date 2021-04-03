@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Dog' do
 
-  describe 'DELETE #destroy', :type => :request do
+  describe '#destroy', :type => :request do
 
     let!(:dog) { FactoryBot.create(:dog) }
 
@@ -25,4 +25,5 @@ describe 'Dog' do
     end
 
   end
+
 end

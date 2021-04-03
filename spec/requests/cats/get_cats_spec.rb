@@ -4,7 +4,7 @@ describe 'Cat' do
 
   let!(:cats) { FactoryBot.create_list(:cat, 10) }
 
-  describe 'GET #index', :type => :request do
+  describe '#index', :type => :request do
 
     before do
       get v1_cats_path
@@ -21,7 +21,7 @@ describe 'Cat' do
 
   end
 
-  describe 'GET #show', :type => :request do
+  describe '#show', :type => :request do
 
     let!(:dog) { cats.first }
 
@@ -49,4 +49,5 @@ describe 'Cat' do
     end
 
   end
+
 end

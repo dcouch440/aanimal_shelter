@@ -4,7 +4,7 @@ describe 'Dog' do
 
   let!(:dogs) { FactoryBot.create_list(:dog, 10) }
 
-  describe 'GET #index', :type => :request do
+  describe '#index', :type => :request do
 
     before do
       get v1_dogs_path
@@ -21,7 +21,7 @@ describe 'Dog' do
 
   end
 
-  describe 'GET #show', :type => :request do
+  describe '#show', :type => :request do
     let!(:dog) { dogs.first }
 
     context 'when successful' do
@@ -48,4 +48,5 @@ describe 'Dog' do
     end
 
   end
+
 end

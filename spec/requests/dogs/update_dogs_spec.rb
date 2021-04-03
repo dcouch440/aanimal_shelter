@@ -4,7 +4,7 @@ describe 'Dog' do
   include FastData::Dogs
   let!(:dog) { FactoryBot.create(:dog) }
 
-  describe 'PATCH #update', :type => :request do
+  describe '#update', :type => :request do
 
     context 'when successful' do
 
@@ -35,4 +35,5 @@ describe 'Dog' do
     end
 
   end
+
 end

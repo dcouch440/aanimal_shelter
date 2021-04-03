@@ -123,7 +123,7 @@ Setup postgresql for rails
   EDITOR="code --wait" rails credentials:edit
 ```
 
-* Within the file add
+* Within the file add then close the file to save
 
 ```
   pg_database_username: add username here
@@ -148,7 +148,7 @@ gem 'dotenv-rails'
 * add a .env file to your main directory
 
 ```
-mkdir .env
+touch .env
 ```
 
 * within your file add your key

@@ -28,6 +28,11 @@ describe Dog, type: :model do
       expect(Dog.seniors).to eq 10
     end
 
+    it 'returns the time of creation in plain english' do
+      FactoryBot.create(:dog)
+      expect(Dog.first.time_at_shelter).to eq 'less than a minute'
+    end
+
   end
 
   context 'When there are no dogs' do

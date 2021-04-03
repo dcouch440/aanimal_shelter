@@ -7,11 +7,11 @@ describe 'statistical dogs json data', :type => :request do
   describe '#index' do
 
     before do
-      get v1_cats_path
+      get v1_dogs_path
       @res = JSON.parse(response.body)['statistics']
     end
 
-    ['total', 'kittens', 'adults', 'seniors'].each do |attr|
+    ['total', 'puppies', 'adults', 'seniors'].each do |attr|
 
       it "should include #{attr} data" do
         expect(@res[attr]).not_to eq(nil)

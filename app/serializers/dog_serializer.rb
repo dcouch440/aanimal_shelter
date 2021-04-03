@@ -10,17 +10,42 @@ class DogSerializer
 
   private def dogs_statistics
     {
-      dogs: @dogs,
-      statistics: create_statistics()
+      dogs: serialize_each_dog(),
+      statistics: serialize_statistics()
     }
   end
 
-  private def create_statistics
+  private def serialize_each_dog
+    if is_many?()
+      @dogs.map { |dog|  serialize_dogs(dog) }
+    else
+      serialize_dogs(@dogs)
+    end
+  end
+
+  private def is_many?
+    @dogs.is_a?(ActiveRecord::Relation)
+  end
+
+  private def serialize_dogs(dog)
+    {
+      name: dog.name,
+      breed: dog.breed,
+      age: dog.age,
+      gender: dog.gender,
+      coat_length: dog.coat_length,
+      size: dog.size,
+      id: dog.id,
+      arrival: dog.time_at_shelter()
+    }
+  end
+
+  private def serialize_statistics
     {
       total: Dog.total_dogs(),
-      seniors: Dog.seniors(),
+      puppies: Dog.puppies(),
       adults: Dog.adults(),
-      puppies: Dog.puppies()
+      seniors: Dog.seniors()
     }
   end
 

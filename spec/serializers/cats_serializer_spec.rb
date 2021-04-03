@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'statistical dogs json data', :type => :request do
+describe 'statistical cats json data', :type => :request do
 
   let!(:cats) { FactoryBot.create_list(:cat, 20) }
 

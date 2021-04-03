@@ -33,6 +33,11 @@ describe Cat, type: :model do
       expect(Cat.seniors).to eq 10
     end
 
+    it 'returns the time of creation in plain english' do
+      FactoryBot.create(:cat)
+      expect(Cat.first.time_at_shelter).to eq 'less than a minute'
+    end
+
   end
 
   context 'When there are no cats' do

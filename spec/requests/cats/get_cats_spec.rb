@@ -23,17 +23,17 @@ describe 'Cat' do
 
   describe '#show', :type => :request do
 
-    let!(:dog) { cats.first }
+    let!(:cat) { cats.first }
 
     context 'when successful' do
 
       before do
-        get v1_cat_path(dog)
+        get v1_cat_path(cat)
         @parse = JSON.parse(response.body)
       end
 
-      it 'returns a dog' do
-        expect(@parse['cats']['id']).to eq dog.id
+      it 'returns a cat' do
+        expect(@parse['cats']['id']).to eq cat.id
       end
 
       it { expect(response).to have_http_status :success }
@@ -42,7 +42,7 @@ describe 'Cat' do
 
     context 'when unsuccessful' do
 
-      before { get v1_dog_path(cats.last.id + 1) }
+      before { get v1_cat_path(cats.last.id + 1) }
 
       it { expect(response).to have_http_status :not_found}
 

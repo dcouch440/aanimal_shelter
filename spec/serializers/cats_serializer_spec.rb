@@ -12,9 +12,11 @@ describe 'statistical dogs json data', :type => :request do
     end
 
     ['total', 'kittens', 'adults', 'seniors'].each do |attr|
+
       it "should include #{attr} data" do
         expect(@res[attr]).not_to eq(nil)
       end
+
     end
 
   end
@@ -27,9 +29,11 @@ describe 'statistical dogs json data', :type => :request do
     end
 
     ['total', 'kittens', 'adults', 'seniors'].each do |attr|
+
       it "should include #{attr} data" do
         expect(@res[attr]).not_to eq(nil)
       end
+
     end
 
   end

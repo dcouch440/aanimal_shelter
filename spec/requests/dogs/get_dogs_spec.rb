@@ -22,6 +22,7 @@ describe 'Dog' do
   end
 
   describe '#show', :type => :request do
+
     let!(:dog) { dogs.first }
 
     context 'when successful' do

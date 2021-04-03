@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe 'Dog' do
+
   include FastData::Dogs
+
   let!(:dog) { FactoryBot.create(:dog) }
 
   describe '#update', :type => :request do

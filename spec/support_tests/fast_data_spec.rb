@@ -1,10 +1,12 @@
 require 'rails_helper'
 
-describe FastData do
+
+describe 'FastData' do
 
   describe 'Dogs#gen_dog' do
 
     include FastData::Dogs
+    before { Dog.destroy_all }
 
     it 'creates a dog' do
       gen_dog()
@@ -26,6 +28,7 @@ describe FastData do
   describe 'Cats#gen_cat' do
 
     include FastData::Cats
+    before { Cat.destroy_all }
 
     it 'creates a cat' do
       gen_cat()

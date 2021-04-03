@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe 'Cat' do
+
   include FastData::Cats
+
   let!(:cat) { FactoryBot.create(:cat) }
 
   describe '#update', :type => :request do

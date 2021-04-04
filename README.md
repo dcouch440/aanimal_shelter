@@ -221,6 +221,7 @@ Prefix Verb    URI Pattern     Controller#Action
 The fallowing information is a listing of routes and real responses with corresponding status codes
 The application displayed is called postman and can be downloaded for free from for testing
 * Download Postman ( https://www.postman.com/ )
+- Added recently (arrival: ) attached to all animals! This response gives you plain a plain english description of when the animal arrived!
 
 # `Dog Paths`
 ### ` GET/v1/dogs { comes with statistics } `

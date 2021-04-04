@@ -1,4 +1,5 @@
 class Cat < ApplicationRecord
+
   validates *%i[name breed age gender coat_length size], presence: true
 
   scope :total_cats, -> { Cat.count }
@@ -9,4 +10,5 @@ class Cat < ApplicationRecord
   def time_at_shelter
     time_ago_in_words(self.created_at)
   end
+
 end

@@ -29,13 +29,15 @@ class CatSerializer
 
   private def serialize_cats(cat)
     {
+      id: cat.id,
       name: cat.name,
       breed: cat.breed,
       age: cat.age,
       gender: cat.gender,
       coat_length: cat.coat_length,
       size: cat.size,
-      id: cat.id,
+      created_at: cat.created_at,
+      updated_at: cat.updated_at,
       arrival: cat.time_at_shelter()
     }
   end

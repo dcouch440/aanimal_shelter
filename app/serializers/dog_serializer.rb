@@ -29,13 +29,15 @@ class DogSerializer
 
   private def serialize_dogs(dog)
     {
+      id: dog.id,
       name: dog.name,
       breed: dog.breed,
       age: dog.age,
       gender: dog.gender,
       coat_length: dog.coat_length,
       size: dog.size,
-      id: dog.id,
+      created_at: dog.created_at,
+      updated_at: dog.updated_at,
       arrival: dog.time_at_shelter()
     }
   end

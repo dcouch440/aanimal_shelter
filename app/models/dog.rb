@@ -1,4 +1,5 @@
 class Dog < ApplicationRecord
+
   validates *%i[name breed age gender coat_length size], presence: true
 
   scope :total_dogs, -> { Dog.count }
@@ -9,4 +10,5 @@ class Dog < ApplicationRecord
   def time_at_shelter
     time_ago_in_words(self.created_at)
   end
+
 end

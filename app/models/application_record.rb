@@ -9,10 +9,10 @@ class ApplicationRecord < ActiveRecord::Base
   end
 
   private
-  def capitalize_gender; self.gender = self.gender.capitalize end
-  def capitalize_breed; self.breed = self.breed.capitalize end
   def capitalize_name; self.name = self.name.capitalize end
+  def capitalize_breed; self.breed = self.breed.capitalize end
   def capitalize_age; self.age = self.age.capitalize end
+  def capitalize_gender; self.gender = self.gender.capitalize end
   def downcase_length; self.coat_length = self.coat_length.downcase end
   def downcase_size; self.size = self.size.downcase end
 

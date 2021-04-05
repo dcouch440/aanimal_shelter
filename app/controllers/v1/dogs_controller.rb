@@ -31,7 +31,7 @@ class V1::DogsController < ApplicationController
   end
 
   private def dog_params
-    params.permit(:name, :breed, :age, :gender, :coat_length, :size)
+    params.permit %i[name breed age gender coat_length size]
   end
 
 end

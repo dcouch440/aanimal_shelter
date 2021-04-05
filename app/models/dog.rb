@@ -1,6 +1,7 @@
 class Dog < ApplicationRecord
 
-  validates *%i[name breed age gender coat_length size], presence: true
+  validates *%i[name breed age gender coat_length size],
+    presence: true
 
   before_save *%i[
     capitalize_age

@@ -31,7 +31,7 @@ class V1::CatsController < ApplicationController
   end
 
   private def cat_params
-    params.permit(:name, :breed, :age, :gender, :coat_length, :size)
+    params.permit %i[name breed age gender coat_length size]
   end
 
 end

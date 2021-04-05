@@ -1,16 +1,11 @@
 module FastData
 
   module Dogs
-    def gen_dog(
-      name: 'George',
-      breed: 'Pug',
-      age: 'Senior',
-      gender: 'Male',
-      coat_length: 'short',
-      size: 'medium'
-    )
-      Dog.create(name: name,breed: breed,age: age,gender: gender,coat_length: coat_length, size: size)
+
+    def gen_dog(options = {}, props = dog_hash())
+      Dog.create(props.merge(options))
     end
+
     def dog_hash
       {
         name: 'George',
@@ -21,19 +16,15 @@ module FastData
         size: 'medium'
       }
     end
+
   end
 
   module Cats
-    def gen_cat(
-      name: 'Misty',
-      breed: 'Oriental Shorthair',
-      age: 'Senior',
-      gender: 'Female',
-      coat_length: 'medium',
-      size: 'extra large'
-    )
-      Cat.create(name: name,breed: breed,age: age,gender: gender,coat_length: coat_length, size: size)
+
+    def gen_cat(options = {}, props = cat_hash())
+      Cat.create(props.merge(options))
     end
+
     def cat_hash
       {
         name: 'Misty',
@@ -44,6 +35,7 @@ module FastData
         size: 'extra large'
       }
     end
+
   end
 
 end

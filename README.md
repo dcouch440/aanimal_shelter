@@ -20,7 +20,6 @@
 * Bundler
 * TDD (Test-driven development)
 * RSpec
-* capybara
 * faker
 * shoulda matcher
 * puma

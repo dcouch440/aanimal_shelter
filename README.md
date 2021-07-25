@@ -9,7 +9,7 @@
 ## `About this App`
 - This is a week 6 Ruby on Rails Epicodus school project.
 - The requirement of this API is to include a dogs and cats table.
-- This API has full CRUD functionality for both tables. This app requires shared Postgres server access
+- This API has full CRUD functionality for both tables.
 
 ***
 ### `Technology Used:`

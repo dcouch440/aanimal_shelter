@@ -5,10 +5,6 @@ class DogSerializer
   end
 
   def serialized_dogs_with_statistics
-    dogs_statistics()
-  end
-
-  private def dogs_statistics
     {
       dogs: serialize_each_dog(),
       statistics: serialize_statistics()

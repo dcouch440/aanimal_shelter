@@ -5,10 +5,6 @@ class CatSerializer
   end
 
   def serialized_cats_with_statistics
-    cats_statistics()
-  end
-
-  private def cats_statistics
     {
       cats: serialize_each_cat(),
       statistics: serialize_statistics()
